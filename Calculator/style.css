@@ -1,0 +1,138 @@
+/* autor Wojciech Wojtasek */
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu+Condensed&display=swap');
+
+/* Global styles */
+*,
+*::before,
+*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-family: 'Ubuntu Condensed', sans-serif;
+    scroll-behavior: smooth;
+    background-color: var(--lighter-color);
+    color: var(--darker-color);
+}
+
+:root{
+    --lighter-color: #f5f9fa;
+    --light-color: #bdeaee;
+    --middle-color: #76b4bd;
+    --dark-color: #58668b;
+    --darker-color: #5e5656;
+}
+
+ul{
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    list-style-type: none;
+}
+
+/* Container */
+.container{
+    background-color: var(--dark-color);
+    padding: 0.5rem;
+    border-radius: 10px;
+    width: min-content;
+    margin: 5rem auto;
+}
+
+/* Result and calculation line */
+.lineResult{
+    display: flex;
+    justify-content: center;
+}
+
+.lineResult .output{
+    background-color: var(--lighter-color);
+    padding: 0.5rem;
+    margin: 0.5rem;
+    border-radius: 10px;
+    border-width: 0;
+    width: 100%;
+    text-align: center;
+}
+
+/* Calculation line */
+.lineCalculation{
+    display: flex;
+    justify-content: center;
+}
+
+.lineCalculation .output{
+    background-color: var(--lighter-color);
+    padding: 0.5rem;
+    margin: 0.5rem;
+    border-radius: 10px;
+    border-width: 0;
+    width: 100%;
+    text-align: center;
+}
+
+/* Buttons line */
+.containerButtons{
+    margin: 0.5rem;
+}
+
+.buttonsInvisible{
+    display: none;
+}
+
+.firstRow{
+    justify-content: end;
+}
+
+.containerButtons button{
+    background-color: var(--light-color);
+    padding: 0.5rem;
+    margin: 0.2rem;
+    border-radius: 10px;
+    border: 0;
+    width: 6rem;
+    text-align: center;
+    font-size: medium;
+}
+
+.containerButtons button:hover{
+    background-color: var(--lighter-color);
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+.containerButtons .buttonNum{
+    background-color: var(--lighter-color);
+}
+
+.containerButtons .buttonEquals{
+    background-color: var(--middle-color);
+}
+
+/* Mobile view */
+@media screen and (max-width: 1000px){
+    .containerButtons button{
+        background-color: var(--light-color);
+        padding: 0.5rem 0rem;
+        margin: 0.2rem 0.2rem;
+        border-radius: 10px;
+        border: 0;
+        width: 4.3rem;
+        text-align: center;
+        font-size: medium;
+    }
+}
+
+@media screen and (max-height: 450px){
+    .container{
+        background-color: var(--dark-color);
+        padding: 0.5rem;
+        border-radius: 10px;
+        width: min-content;
+        margin: 0.5rem auto;
+    }
+}

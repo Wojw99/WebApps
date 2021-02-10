@@ -1,0 +1,214 @@
+/* autor Wojciech Wojtasek */
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu+Condensed&display=swap');
+
+/* Global styles */
+*,
+*::before,
+*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --light-color: #f4f4f8;
+    --middle-color: #e6e6ea;
+    --accent-color: #fed766;
+    --darker-color: #5e5656;
+}
+
+html{
+    font-family: 'Ubuntu Condensed', sans-serif;
+    scroll-behavior: smooth;
+    background-color: var(--darker-color);
+    color: var(--darker-color);
+}
+
+.rotation{
+    transform: rotate(90deg) translate(-28%) scaleX(85%);
+}
+
+.pageDisabled{
+    display: none;
+}
+
+.pageEnabled{
+    display: block;
+}
+
+/* Body */
+
+body{
+    padding: 10px;
+}
+
+.wrapper{
+    background-color: var(--light-color);
+    padding: 0.5rem;
+    margin: 0 auto;
+    max-width: 500px;
+    width: 100%;
+}
+
+h1{
+    font-size: 24px;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.wrapper .form{
+    width: 100%;
+}
+
+/* Input Waring */
+.input_warning{
+    border: 2px solid red;
+    background-color: lightcoral;
+}
+
+/* General input */
+.wrapper .form .input_field{
+    margin: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.wrapper .form .input_field label{
+    width: 12rem;
+    margin-right: 10px;
+}
+
+.wrapper .form .input_field .input{
+    width: 100%;
+    outline: none;
+    border: 1px solid var(--middle-color);
+    padding: 8px 10px;
+    border-radius: 3px;
+    transition: all 0.3s ease;
+}
+
+/* Radio */
+.wrapper .form .input_field.radios{
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.radio_field{
+    margin-top: 5px;
+    width: 100%;
+    user-select: none;
+}
+
+.radio_label div{
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+    width: 90%;
+    user-select: none;
+}
+
+input[type=radio]{
+    width: 18px;
+    height: 12px;
+}
+
+input[type=radio]:checked ~ div{
+    color: var(--accent-color);
+}
+
+/* Checkbox */
+.check div{
+    margin: 0;
+    white-space: nowrap;
+    padding: 2px 5px;
+    user-select: none;
+}
+
+.check{
+    width: 100%;
+    height: 26px;
+    display: flex;
+    flex-direction: row;
+}
+
+input[type=checkbox]:checked ~ div{
+    color: var(--accent-color);
+}
+
+/* Color Input */
+.wrapper .form .input_field .input[type="color"]{
+    min-height: 30px;
+    padding: 0;
+}
+
+/* Select */
+.wrapper .form .input_field .custom_select{
+    position: relative;
+    width: 100%;
+    height: 37px;
+}
+
+.wrapper .form .input_field .custom_select select{
+    -webkit-appearance: none;
+    appearance: none;
+    border: 1px solid var(--middle-color);
+    width: 100%;
+    height: 100%;
+    padding: 8px 10px;
+    border-radius: 3px;
+    outline: none;
+}
+
+.wrapper .form .input_field .custom_select select:before{
+    content: "";
+    position: absolute;
+    top: 12px;
+    right: 10px;
+    border: 8px solid;
+    border-color: red transparent transparent transparent;
+}
+
+.wrapper .form .input_field .input:focus,
+.wrapper .form .input_field select:focus{
+    border: 1px solid var(--accent-color);
+}
+
+/* Button */
+.button{
+    width: 100%;
+    padding: 8px;
+    font-size: 15px;
+    border: 0;
+    font-family: 'Ubuntu Condensed', sans-serif;
+    background: var(--middle-color);
+    cursor: pointer;
+    border-radius: 3px;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.button:last-child{
+    margin-bottom: 0;
+}
+
+.button:hover{
+    background: var(--accent-color);
+}
+
+/* Mobile */
+
+@media(max-width: 420px){
+    .wrapper .form .input_field{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .wrapper .form .input_field label{
+        margin-bottom: 3px;
+    }
+
+    .wrapper .form .input_field.terms{
+        flex-direction: row;
+    }
+}

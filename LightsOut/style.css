@@ -1,0 +1,71 @@
+/* autor Wojciech Wojtasek */
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu+Condensed&display=swap');
+
+/* Global styles */
+*,
+*::before,
+*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --light-color: #f4f4f8;
+    --middle-color: #f3efe5 ;
+    --accent-color: #fed766 ;
+    --darker-color: #5e5656;
+}
+
+html{
+    font-family: 'Ubuntu Condensed', sans-serif;
+    scroll-behavior: smooth;
+    background-color: var(--darker-color);
+    color: var(--light-color);
+}
+
+ul{
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    list-style-type: none;
+}
+
+.rotation{
+    transform: rotate(90deg) translate(-28%) scaleX(85%);
+}
+
+/* Header */
+.containerHeader{
+    margin: 1rem auto;
+}
+
+h1{
+    text-align: center;
+}
+
+/* Game */
+.containerGame{
+    background-color: var(--light-color);
+    padding: 0.5rem;
+    width: min-content;
+    margin: 0 auto;
+}
+
+button{
+    width: 4rem;
+    height: 4rem;
+    margin: 0.1rem;
+    border: 0;
+    background-color: var(--middle-color);
+}
+
+button:hover{
+    border: var(--light-color) 4px solid;
+}
+
+.clicked{
+    background-color: var(--accent-color);
+}

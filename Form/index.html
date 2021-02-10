@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Wojciech Wojtasek">
+    <link rel="stylesheet" href="style.css">
+    <title>Formularz</title>
+</head>
+<body>
+    <div class="wrapper">
+        <h1 id="title">Formularz</h1>
+
+        <form id="form">
+
+            <!-- PAGE ONE -->
+            <div class="form" id="page1">
+            <div class="input_field">
+                <label>Imię*</label>
+                <input type="text" pattern="[A-Za-z]{1,32}" class="input" id="input_fname" required>
+            </div>
+            <div class="input_field">
+                <label>Nazwisko*</label>
+                <input type="text" pattern="[A-Za-z]{1,32}" class="input" id="input_lname" required>
+            </div>
+            <div class="input_field">
+                <label>Email*</label>
+                <input type="email" class="input" id="input_email" required>
+            </div>
+            <div class="input_field">
+                <label>Data urodzenia</label>
+                <input type="date" class="input" id="input_date">
+            </div>
+            <div class="input_field date">
+                <label>Płeć</label>
+                <div class="custom_select">
+                    <select class="custom_select" id="select_sex">
+                        <option value="">Wybierz</option>
+                        <option value="mela">Mężczyzna</option>
+                        <option value="female">Kobieta</option>
+                    </select>
+                </div>
+            </div>
+            </div>
+
+            <!-- PAGE TWO -->
+            <div class="form" id="page2">
+                <div class="input_field">
+                    <label>Ulubiona liczba</label>
+                    <input type="number" class="input" id="input_num">
+                </div>
+    
+                <div class="input_field">
+                    <label>Ulubiony kolor</label>
+                    <input type="color" class="input" id="input_color">
+                </div>
+    
+                <!-- Radio -->
+                <div class="input_field radios">
+                    <label>Ulubiony język programowania</label>
+                    <div class="radio_field">
+                        <label class="radio_label">
+                            <input type="radio" name="lang" value="JavaScript">
+                            <div>JavaScript</div>
+                        </label>
+                    </div>
+                    <div class="radio_field">
+                        <label class="radio_label">
+                            <input type="radio" name="lang" value="C#">
+                            <div>C#</div>
+                        </label>
+                    </div>
+                    <div class="radio_field">
+                        <label class="radio_label">
+                            <input type="radio" name="lang" value="C++">
+                            <div>C++</div>
+                        </label> 
+                    </div>
+                    <div class="radio_field">
+                        <label class="radio_label">
+                            <input type="radio" name="lang" value="Java">
+                            <div>Java</div>
+                        </label>
+                    </div>
+                    <div class="radio_field">
+                        <label class="radio_label">
+                            <input class="radio_big" type="radio" name="lang" value="Python">
+                            <div>Python</div>
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PAGE THREE -->
+            <div class="form" id="page3">
+                <!-- CheckBox1 -->
+                <div class="input_field terms">
+                    <label class="check">
+                        <input type="checkbox" id="input_regu" required>
+                        <div>Akceptuję regulamin.*</div>
+                    </label>
+                </div>
+    
+                <!-- CheckBox2 -->
+                <div class="input_field terms">
+                    <label class="check">
+                        <input type="checkbox" id="input_data" required>
+                        <div>Akceptuję postanowienia o przetwarzaniu danych.*</div>
+                    </label>
+                </div>
+    
+                <!-- CheckBox3 -->
+                <div class="input_field terms">
+                    <label class="check">
+                        <input type="checkbox" id="input_lice" required>
+                        <div>Akceptuję umowę licencyjną.*</div>
+                    </label>
+                </div>
+
+                <div class="input_field terms">
+                    <label class="check">
+                        <input type="checkbox">
+                        <div>Chcę zapisać się na newsletter!</div>
+                    </label>
+                </div>
+
+                <div class="input_field">
+                    <button class="button" id="buttonSubmit">Wyślij</button>
+                </div>
+            </div>
+        </form>
+
+        <div class="input_field">
+            <button class="button" id="buttonNext">Dalej</button>
+        </div>
+    </div>
+ 
+    <script src="script.js"></script>
+</body>
+</html>

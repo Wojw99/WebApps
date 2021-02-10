@@ -1,0 +1,168 @@
+/* autor Wojciech Wojtasek */
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu+Condensed&display=swap');
+
+/* Global styles */
+*,
+*::before,
+*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --light-color: #f4f4f8;
+    --middle-color: #e6e6ea;
+    --accent-color: #fed766;
+    --darker-color: #5e5656;
+
+    --lecture-color: #95f57d;
+    --lab-color: #a2abff;
+    --exercise-color: #66f4fe;
+    --consultation-color: #fed766;
+}
+
+html{
+    font-family: 'Ubuntu Condensed', sans-serif;
+    scroll-behavior: smooth;
+    background-color: var(--darker-color);
+    color: var(--darker-color);
+}
+
+.pageDisabled{
+    display: none;
+}
+
+/* Body */
+
+body{
+    padding: 10px;
+}
+
+.wrapper{
+    background-color: var(--light-color);
+    padding: 0.5rem;
+    margin: 0 auto;
+    max-width: 590px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1{
+    font-size: 24px;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+h2{
+    font-size: 20px;
+    font-weight: 500;
+    text-align: center;
+}
+
+ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+ol{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+p{
+    text-align: center;
+}
+
+/* Section */
+.section{
+    margin-bottom: 0.5rem;
+}
+
+.section_buttons{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Element */
+.element{
+    background-color: var(--middle-color);
+    margin: 1.5rem 0;
+    border-radius: 3px;
+    min-width: 33rem;
+}
+
+.element ol li{
+    padding: 0.1rem 0.5rem;
+    border-radius: 3px;
+}
+
+.element_lecture{
+    background-color: var(--lecture-color);
+}
+
+.element_lab{
+    background-color: var(--lab-color);
+}
+
+.element_exercise{
+    background-color: var(--exercise-color);
+}
+
+.element_consultation{
+    background-color: var(--consultation-color);
+}
+
+.element_hours{
+    font-weight: 500;
+    text-align: left;
+    background-color: var(--darker-color);
+    color: var(--light-color);
+}
+
+/* Button */
+.buttonDay{
+    width: 6.5rem;
+    padding: 8px;
+    font-size: 15px;
+    border: 0;
+    font-family: 'Ubuntu Condensed', sans-serif;
+    background: var(--middle-color);
+    color: var(--darker-color);
+    cursor: pointer;
+    border-radius: 3px;
+    outline: none;
+    text-align: center;
+    margin: 0.1rem;
+    transition: all 0.3s ease;
+}
+
+.buttonActive{
+    background: var(--accent-color);
+}
+
+.buttonDay:last-child{
+    margin-bottom: 0;
+}
+
+.buttonDay:hover{
+    background: var(--accent-color);
+}
+
+/* Mobile */
+
+@media screen and (max-width: 450px){
+    .element{
+        background-color: var(--middle-color);
+        margin: 1.2rem 0.5rem;
+        border-radius: 3px;
+        min-width: 20rem;
+    }
+}

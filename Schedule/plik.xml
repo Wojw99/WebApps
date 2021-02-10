@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<root>
+<!-- fragment rozkładu M.Żabka, wchodząc na stronę pobieramy ten XML i przetwarzamy
+JavaScript na rozkład mobilny, postać ,,graficzna'' 
+chyba najlepiej 1 dzień na stronę, przewijanie do innej strony, łatwe zobaczenie czasu, 
+ale też łatwe odróżnienie rodzaju zajęć,  
+Probgram nie może zakładać, że ten XML się nie zmieni - może zajęcia 
+będą przesunięte, dodane, usunięte (w szczególności dodam brakujące zajęcia)
+-->
+<person firstName="Marek" lastName="Żabka" tyt="dr inż." position="adiunkt" />
+<activities>
+<lecture>
+	<name>Przedmiot specjalnościowy II Mobilne aplikacje webowe</name>
+	<shortname>PSII.Mob.apl.web</shortname>
+	<room>L.409.MS</room>
+	<group>Inf PAM s. V/1 B</group>
+	<day wd="5">piątek</day>
+	<begin time="510">8:30</begin><!-- time=510 = 8*60+30 liczba minut od północy  -->
+	<end time="600">10:00</end>
+	<parity p="1">odd</parity>
+</lecture>
+<lab>
+	<name>Przedmiot specjalnościowy II Mobilne aplikacje webowe</name>
+	<shortname>PSII.Mob.apl.web</shortname>
+	<room>L.409.MS</room>
+	<group>Inf PAM s. V/1 B</group>
+	<day wd="1">poniedziałek</day>
+	<begin time="510">8:30</begin>
+	<end time="660">11:00</end>
+</lab>
+<lab>
+	<name>Przedmiot specjalnościowy II Mobilne aplikacje webowe</name>
+	<shortname>PSII.Mob.apl.web</shortname>
+	<room>L.409.MS</room>
+	<group>Inf PAM s. V/1 A</group>
+	<day wd="1">poniedziałek</day>
+	<begin time="675">11:15</begin>
+	<end time="825">13:00</end>
+</lab>
+<lab>
+	<name>Przedmiot specjalnościowy II Mobilne aplikacje webowe</name>
+	<shortname>PSII.Mob.apl.web</shortname>
+	<room>L.409.MS</room>
+	<group>Inf PAM s. V/2 D</group>
+	<day wd="5">piatek</day>
+	<begin time="615">10:15</begin>
+	<end time="765">12:45</end>
+</lab>
+<lab>
+	<name>Przedmiot specjalnościowy II Mobilne aplikacje webowe</name>
+	<shortname>PSII.Mob.apl.web</shortname>
+	<room>L.409.MS</room>
+	<group>Inf PAM s. V/2 C</group>
+	<day wd="5">piatek</day>
+	<begin time="780">13:00</begin>
+	<end time="930">15:30</end>
+</lab>
+<exercise>
+	<name>Matematyka</name>
+	<shortname>Mat</shortname>
+	<room>A215</room>
+	<group>1s_ZiIP 1/1</group>
+	<day wd="1">poniedziałek</day>
+	<begin time="840">14:00</begin>
+	<end time="930">15:30</end>
+</exercise>
+
+<consultation>	
+	<room>Zoom</room>	
+	<day wd="1">poniedziałek</day>
+	<begin time="930">15:30</begin>
+	<end time="990">16:30</end>
+</consultation>
+
+<lecture>
+	<name>Algebra</name>
+	<shortname>Alg</shortname>
+	<room>A zielona</room>
+	<group>AiR Rok I</group>
+	<day wd="4">czwartek</day>
+	<begin time="495">8:15</begin>
+	<end time="585">9:45</end>	
+</lecture>
+<exercise>
+	<name>Algebra</name>
+	<shortname>Alg</shortname>
+	<room>MsTeams</room>
+	<group>AiR Rok I/1</group>
+	<day wd="4">czwartek</day>
+	<begin time="615">10:15</begin>
+	<end time="705">11:45</end>	
+</exercise>
+<exercise>
+	<name>Algebra</name>
+	<shortname>Alg</shortname>
+	<room>MsTeams</room>
+	<group>AiR Rok I/2</group>
+	<day wd="4">czwartek</day>
+	<begin time="720">12:00</begin>
+	<end time="810">13:30</end>	
+</exercise>
+
+</activities>
+
+</root> 
+ 
